@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jk</title>
+    <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        .jk{
+            margin: 10vh auto 0 auto;
+            width: 400px;
+            border: 2px solid gray;
+            padding: 0 30px 30px 30px;
+           background-color: rgba(159, 159, 159, 0.333);
+            color: black;
+            font-family: "Kanit", sans-serif;
+        }
+        .name,.mob,.mail,.dob,.gen,.aad,.add,.father,.mother,.qua{
+            display: flex;
+            margin: 0 auto 0 auto;
+        }
+        h1{
+            width: 100%;
+            height: 40px;
+            background-color: gray;
+            text-align: center;
+            color:white;
+            align-items: center;
+        }
+        h3{
+            margin-left: 20px;
+        }
+        button{
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #2f2f2f2f;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <div class="continer">
+      
+       
+        <div class="jk" id="jk">
+            <h1>Application Form</h1>
+
+            <div class="name"><h3>Name :</h3> <h3 id="jname"></h3></div>
+            
+          <div class="dob">  <h3>Date Of Birth :</h3> <h3 id="dob"></h3></div>
+            <div class="gen"><h3>Gender :</h3> <h3 id="gender"></h3></div>
+          <div class="mob">  <h3>Mobile Number :</h3> <h3 id="mobile"></h3></div>
+           <div class="mail"> <h3>E-mail :</h3>  <h3 id="mail"></h3></div>
+           
+          <div class="aad">  <h3>Aadhar number :</h3><h3 id="aadhar"></h3></div>
+         <div class="add"><h3>Address :</h3> <h3 id="address"></h3></div>
+           <div class="father"> <h3>Father Name :</h3> <h3 id="father"></h3></div>
+          <div class="mother">  <h3>Mother Name :</h3> <h3 id="mother"></h3></div>
+          <div class="qua">  <h3>Qualifaction :</h3> <h3 id="edu"></h3></div>
+
+       
+          <button onclick="copy()" id="print">Print</button>
+
+          <button onclick="cleare()">Cleare</button>
+
+
+        </div>
+       
+   
+</div>
+<script>
+
+            var ath=localStorage.getItem('user');
+            var b=localStorage.getItem('birth');
+            var c= localStorage.getItem('gend')
+            var d=localStorage.getItem('num');
+            var e= localStorage.getItem('gmail');
+            var f = localStorage.getItem('anum');
+            var g = localStorage.getItem('home');
+            var h= localStorage.getItem('fname');
+            var i = localStorage.getItem('mname');
+            var j = localStorage.getItem('education');        
+
+
+
+  document.getElementById('jname').innerHTML=ath;
+  document.getElementById('dob').innerHTML= b ;
+  document.getElementById('gender').innerHTML= c ;
+  document.getElementById('mobile').innerHTML= d ;
+  document.getElementById('mail').innerHTML= e ;
+  document.getElementById('aadhar').innerHTML= f ;
+  document.getElementById('address').innerHTML= g ;
+  document.getElementById('father').innerHTML= h ;
+  document.getElementById('mother').innerHTML= i ;
+  document.getElementById('edu').innerHTML= j ;
+
+  
+  
+  
+
+  
+      
+  
+
+
+
+  
+    function copy(){
+        var jk = document.getElementById('jk').innerHTML;
+        // var firstname = localStorage.getItem('kumar');
+        //document.body.innerHTML = firstname;
+       
+     
+
+        window.print();
+       document.body.innerHTML=jk;
+     
+    }
+
+
+    function cleare(){
+        localStorage.clear();
+        alert("click ok");
+    }
+
+
+</script>
+    
+</body>
+</html>

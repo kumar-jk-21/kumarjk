@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="continer">
+        <form action="local.html" id="form" onsubmit="return valid()" name="myform">
+
+            <h1>Form Validation</h1>
+
+            <label for="name">Full Name </label>
+            <input type="text" name="name" id="fullname"  placeholder="Name">
+            <!-- <h6 id="name-error"></h6> -->
+
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob" id="dob">
+            <!-- <h6 id="dob-error"></h6> -->
+
+            <label for="gen">Gender</label>
+            <div class="gender" id="gender">
+                <p>Male<input type="radio" name="ge" id="male" value="Male"></p>
+                <p>Female<input type="radio" name="ge" id="female" value="Female"></p>
+               <p>Other <input type="radio" name="ge" id="other" value="Other"></p>
+            </div>
+
+            <label for="mno">Mobile</label>
+            <input type="text" name="mno" id="mno" placeholder="Mobile Number">
+            <h6 id="mob-error"></h6>
+
+            <label for="mail">Mail ID</label>
+            <input type="text" name="mail" id="mail" placeholder="E-mail">
+
+            <label for="aadhar">Aadhar </label>
+            <input type="text" name="aadhar" id="aadhar" placeholder="Aadhar Number">
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address" placeholder="address"></textarea>
+
+            <label for="fathername">Father Name</label>
+            <input type="text" name="fathername" id="fathername" placeholder="Father  Name">
+
+            <label for="mothername">Mother Name</label>
+            <input type="text" name="mothername" id="mothername" placeholder="Mother Name">
+
+            <label for="edu">Qualifaction</label>
+            <input type="text" name="edu" id="edu" placeholder="Qualifaction">
+
+            <input type="submit">
+
+        </form>
+
+     
+
+    </div>
+    <script src="jsformvalid1.js"></script>
+</body>
+</html>
